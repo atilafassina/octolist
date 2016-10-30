@@ -9,8 +9,10 @@ class App extends Component {
     return (
       <div className="app">
         <header className="app-header">
-          <img src={logo} className="logo" alt="logo" />
-          <h1>Octolist</h1>
+          <a href="https://github.com/atilafassina/octolist" target="_blank">
+            <img src={logo} className="logo" alt="logo" />
+            <h1>Octolist</h1>
+          </a>
           <h2>List your Github Repos</h2>
         </header>
         <InputUser />
