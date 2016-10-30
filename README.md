@@ -1,8 +1,10 @@
 # Octolist
 [![Build Status](https://img.shields.io/travis/atilafassina/octolist/master.svg?style=flat)](https://travis-ci.org/atilafassina/octolist)
+
 Display any Github user's Repository List 😎
 
 > This is a React + Redux test case.
+
 > Built with the awesome [create-react-app](https://github.com/facebookincubator/create-react-app)
 
 # Stack
