@@ -2,6 +2,7 @@
   "name": "octolist",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://atilafassina.github.io/octolist",
   "devDependencies": {
     "react-scripts": "0.7.0"
   },
