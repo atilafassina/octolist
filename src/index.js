@@ -7,7 +7,7 @@ import octolistApp from './reducers/index.js';
 import App from './App';
 import './index.css';
 
-let store = createStore(octolistApp, applyMiddleware(thunk));
+const store = createStore(octolistApp, applyMiddleware(thunk));
 
 ReactDOM.render(
   <Provider store={store}>
