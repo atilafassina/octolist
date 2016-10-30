@@ -1,8 +1,9 @@
 import React from 'react';
 
-const Repo = ({ name }) => (
+const Repo = ({ name, description, link }) => (
   <li className="gh-repo" >
-    {name}
+    <a href={link} target="_blank">{name}</a>
+    <p>{description}</p>
   </li>
 )
 

@@ -1,4 +1,3 @@
-
 export const inputUser = (text) => {
   return dispatch => {
     dispatch(fetchRepos);
@@ -25,29 +24,25 @@ function checkStatus(response) {
 
 function fetchRepos(){
   return {
-      type: 'FETCH',
-      isFetching: true
+      type: 'FETCH'
     }
 }
 
 function receiveRepos(json) {
   return {
     type: 'NEW_REPOS',
-    repositories: json,
-    receivedAt: Date.now()
+    repositories: json
   }
 }
 
 function fetchFailed(error) {
   if (error.message.toLowerCase() === 'not found' ) {
     return {
-      type: 'NO_USER',
-      msg: 'User does not exist'
+      type: 'NO_USER'
     }
   } else {
     return {
-      type: 'NETWORK_ERROR',
-      msg: 'There is a problem with the request. Please try again.'
+      type: 'NETWORK_ERROR'
     }
   }
 }

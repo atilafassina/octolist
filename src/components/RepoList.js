@@ -1,13 +1,12 @@
 import React from 'react';
 import Repo from './Repo';
 
-const emptyRepositories = { msg: 'Type a valid username.' };
-
-const RepoList = (currentState = emptyRepositories) => {
+const RepoList = (currentState = {}) => {
   if (Array.isArray(currentState.data)) {
-    return (<ul>
+    return (
+    <ul className="gh-repoList">
       {currentState.data.map(ghrep =>
-        <Repo name={ghrep.name} key={ghrep.id} />
+        <Repo key={ghrep.id} name={ghrep.name} description={ghrep.description} link={ghrep.html_url} />
       )}
     </ul>)
   } else {

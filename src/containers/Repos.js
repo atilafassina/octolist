@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import RepoList from '../components/RepoList.js';
+import RepoList from '../components/RepoList';
 
 function checkRepos(currentState) {
   if(currentState.repositories) {
