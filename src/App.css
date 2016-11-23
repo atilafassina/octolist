@@ -2,6 +2,7 @@ a {
   text-decoration: none;
   color: rgb(80,80,80);
   font-weight: bold;
+  cursor: pointer;
   transition: all 300ms linear;
 }
 
@@ -31,6 +32,35 @@ a:focus {
   justify-content: center;
   align-items: center;
   padding: 3rem 5rem;
+}
+
+.gh-userData {
+  width: 40%;
+  padding: 2rem;
+  border: dotted 2px rgb(80,220,150);
+}
+.gh-userTitle {
+  font-size: 2rem;
+}
+.gh-userAvatar {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+.gh-statsList {
+  display: flex;
+  justify-content: space-around;
+}
+
+.gh-stats {
+  list-style: none;
+  text-align: center;
+  margin: 0 1rem;
+}
+
+.gh-count {
+  display: block;
 }
 
 .gh-user {
@@ -80,4 +110,20 @@ a:focus {
 
 .gh-repo:last-of-type {
   border: none;
+}
+
+.gh-repoTitle {
+  font-size: 2rem;
+}
+
+.gh-lang {
+  display: block;
+  margin-bottom: .5rem;
+  font-size: .5rem;
+}
+
+.gh-lastCommit {
+  display: block;
+  font-size: .75rem;
+  margin-top: .5rem;
 }

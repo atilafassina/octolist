@@ -1,10 +1,34 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import Repos from './containers/Repos';
-import InputUser from './components/Form';
+import InputUser from './components/input';
+import RepoList from './components/RepoList';
 import './App.css';
 
 class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      repos: null
+    }
+  }
+
+  repos(event) {
+    event.preventDefault();
+    const form = event.target.parentNode;
+    const username = form.querySelector('input').value;
+
+    fetch(`https://api.github.com/users/${username}/repos`)
+    .then(response => {
+        return response.json();
+    }).then(json => {
+        this.setState({
+          repos: json
+        });
+    })
+    .catch(error => { console.error('something has gone wrong', error); });
+}
+
   render() {
     return (
       <div className="app">
@@ -15,8 +39,8 @@ class App extends Component {
           </a>
           <h2>List your Github Repos</h2>
         </header>
-        <InputUser />
-        <Repos />
+        <InputUser getRepo={this.repos.bind(this)}/>
+        <RepoList repos={this.state.repos}/>
       </div>
     );
   }

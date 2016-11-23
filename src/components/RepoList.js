@@ -1,17 +1,26 @@
-import React from 'react';
-import Repo from './Repo';
+import React, { Component } from 'react';
+import RepoItem from './RepoItem';
 
-const RepoList = (currentState = {}) => {
-  if (Array.isArray(currentState.data)) {
-    return (
-    <ul className="gh-repoList">
-      {currentState.data.map(ghrep =>
-        <Repo key={ghrep.id} name={ghrep.name} description={ghrep.description} link={ghrep.html_url} />
-      )}
-    </ul>)
-  } else {
-    return (<p>{currentState.data ? currentState.data: 'Type a valid username'}</p>)
+class RepoList extends Component {
+  render(props) {
+    if(this.props.repos) {
+      return (
+          <ul className="gh-repoList">
+            <header className="gh-userData">
+              <h2 className="gh-userTitle">{this.props.repos[0].owner.login}'s Repositories</h2>
+              <img className="gh-userAvatar" alt={`${this.props.repos[0].owner.login} avatar`} src={this.props.repos[0].owner.avatar_url} />
+            </header>
+            {this.props.repos.map(ghrep =>
+              <RepoItem data={ghrep} key={ghrep.id}/>
+            )}
+          </ul>);
+    } else {
+      return (<p>Enter a valid Github username</p>);
+    }
   }
-}
+};
 
-export default RepoList
+export default RepoList;
+
+
+//name={ghrep.name} description={ghrep.description} link={ghrep.link} key={ghrep.id} watchers={ghrep.watchers}
