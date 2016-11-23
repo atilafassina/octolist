@@ -12,9 +12,6 @@ Display any Github user's Repository List 😎
 - [BabelJS](https://babeljs.io/)
 - [Jest](https://facebook.github.io/jest/)
 - [React](https://facebook.github.io/react/)
-- [Redux](http://redux.js.org/)
-- [React-Redux](http://redux.js.org/docs/basics/UsageWithReact.html)
-- [React-Thunk](https://github.com/gaearon/redux-thunk)
 - [Autoprefixer](https://github.com/postcss/autoprefixer)
 
 # Usage
