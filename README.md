@@ -3,9 +3,7 @@
 
 Display any Github user's Repository List 😎
 
-> This is a React + Redux test case.
-
-> Built with the awesome [create-react-app](https://github.com/facebookincubator/create-react-app)
+> Test case with [create-react-app](https://github.com/facebookincubator/create-react-app)
 
 # Stack
 - [Webpack](https://webpack.github.io/)
